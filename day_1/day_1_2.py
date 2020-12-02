@@ -1,7 +1,7 @@
 def ReportRepair():
     dic = {}
     nums = []
-    with open("input.txt", "r") as file:
+    with open("input", "r") as file:
         for line in file:
             nums.append(int(line))
     for i in range(len(nums)):
