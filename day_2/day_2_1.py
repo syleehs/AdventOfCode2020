@@ -1,4 +1,4 @@
-def PasswordPhilosophy():
+def password_philosphy():
     valid_passwords = 0
     with open("input", "r") as file:
         for line in file:
@@ -14,7 +14,7 @@ def PasswordPhilosophy():
     return valid_passwords
 
 def main():
-    print(PasswordPhilosophy())
+    print(password_philosphy())
 
 if __name__ == '__main__':
     main()

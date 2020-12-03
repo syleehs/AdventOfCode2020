@@ -1,5 +1,5 @@
 #Similar to a 3SUM problem
-def ReportRepair():
+def report_repair():
     dic = {}
     nums = []
     with open("input", "r") as file:
@@ -13,7 +13,7 @@ def ReportRepair():
             return dic[num] * num
     
 def main():
-    print(ReportRepair())
+    print(report_repair())
 
 if __name__ == '__main__':
     main()

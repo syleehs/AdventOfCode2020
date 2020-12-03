@@ -1,6 +1,6 @@
 # DP solution
 # Calculate each section as "2020 - num" and check within the dictionary if that value has been calculated
-def ReportRepair():
+def report_repair():
     dic = {}
     with open("input", "r") as file:
         for line in file:
@@ -11,7 +11,7 @@ def ReportRepair():
     
     
 def main():
-    print(ReportRepair())
+    print(report_repair())
 
 if __name__ == '__main__':
     main()

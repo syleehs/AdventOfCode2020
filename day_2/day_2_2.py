@@ -1,4 +1,4 @@
-def PasswordPhilosophy():
+def password_philosphy():
     valid_passwords = 0
     with open("input", "r") as file:
         for line in file:
