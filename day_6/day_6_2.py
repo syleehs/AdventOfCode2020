@@ -6,15 +6,17 @@ def custom_customs():
     res = 0
     ans = []
     group_ans = []
-
+    #Retrieve all the answers
     for line in lines:
         if line == '':
             group_ans.append(ans)
             ans = []
         else:
             ans.append(line)
+    #Does not trigger the last line, add the last group answers
     group_ans.append(ans)
 
+    #Loop through group answers, and determine intersection to get answers where everyone answered yes
     for ans in group_ans:
         flag = 0
         for an in ans:

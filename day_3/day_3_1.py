@@ -1,6 +1,7 @@
 def toboggan_trajectory():
     x = 0
     trees_encountered = 0
+    #Count number of trees encountered moving (3, 1) every loop
     with open("input", "r") as file:
         for line in file:
             if (line[x % (len(line)-1)] == "#"):

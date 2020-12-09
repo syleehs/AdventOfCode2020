@@ -5,7 +5,7 @@ def toboggan_trajectory():
     with open("input", "r") as file:
         lines = file.readlines()
     width = len(lines[0]) - 1
-
+    #Go down the slope and count how many trees we'll encounter for the movement listed in trees_encountered
     for slope in trees_encountered.keys():
         x, y = 0, 0
         down = slope[1]
@@ -18,6 +18,7 @@ def toboggan_trajectory():
             y += down
 
     res = 1
+    #Calculate the product of each iteration down the slope
     for trees_slope in trees_encountered.values():
         res *= trees_slope
     return res

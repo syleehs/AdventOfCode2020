@@ -9,6 +9,7 @@ def run_program(lines):
     visited = set()
     res = 0
     index = 0
+    #Iterate through until we've looped backwards
     while index not in visited:
         command, val = lines[index].split(" ")
         visited.add(index)

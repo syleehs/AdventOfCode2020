@@ -5,7 +5,7 @@ def passport_processing():
 
     with open("input", "r") as file:
         lines = file.readlines()
-
+    #loop through and store the entries in a batch
     for line in lines:
         if line == "\n":
             batch.append(arr)
@@ -14,9 +14,9 @@ def passport_processing():
             entries = line.strip().split(" ")
             for entry in entries:
                 arr.append(entry[:3])
-
+    #Does not add the last entry
     batch.append(arr)
-
+    #Loop through, and check if it has all the entries (valid)
     for entry in batch:
         if "cid" in entry:
             if len(entry) == 8:
