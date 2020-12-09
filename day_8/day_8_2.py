@@ -2,6 +2,7 @@ def handheld_halting():
     with open("input", "r") as file:
         lines = file.read().splitlines()
 
+    #Determine if res can be calculated for each possible change -- Brute force
     for i in range(len(lines)):
         program = lines.copy()
         command = program[i]
@@ -14,6 +15,7 @@ def handheld_halting():
             break
     return res
 
+#Calculate res and only return if we reach eof
 def run_program(lines):
     visited = set()
     res = 0
@@ -22,7 +24,6 @@ def run_program(lines):
         if index in visited:
             return None
         visited.add(index)
-
         try:
             command, val = lines[index].split(" ")
             if command == "nop":
